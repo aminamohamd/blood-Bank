@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dashbord</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="CSS/dashboard.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,500;0,700;0,900;1,100;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- -------------navbar------------- -->
+    <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+        <div class="container-fluid">
+               <i class="fa-solid fa-align-left bg-white fs-5 p-1 m-2" data-bs-toggle="button"  onclick="showSidebar()"></i>
+
+          <a class="navbar-brand fw-bold fs-2 me-auto" href="#"> Blood Bank</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+                        <!-- ----------------profile--------------------- -->
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <form class="d-flex" role="search">
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control me-2 rounded-pill " placeholder="search" aria-label="search" aria-describedby="button-addon2">
+                    <button class="btn btn-outline-secondary" type="button" id="button-addon2"><i class="fa-solid fa-magnifying-glass rounded-pill "></i></button>
+                </div>
+            </form>
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle second-text fw-bold" href="#" id="navbarDropdown"
+                        role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="fa-solid fa-circle-user fa-lg"></i> Name
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="updateprofile.html"> Update Profile</a></li>
+                        <li>  <hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item text-danger" href="#">Logout</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+      </nav>
+    <!-- -------------navbar------------- -->
+
+    <div class="d-flex" id="wrapper">
+        <!-- ------------------Sidebar----------------------------- -->
+        <div class="" id="sidebar-wrapper">
+                                <!-----------------------admin------------------->
+
+            <div class="sidebar-heading text-center py-4 primary-text fs-4 fw-bold text-uppercase border-bottom">
+                <i class="fas fa-user-secret me-2"></i> Admin
+            </div>
+            <div class="list-group list-group-flush">
+                <a href="#" class="list-group-item list-group-item-action bg-transparent second-text active  border-bottom">
+                    <i class="fas fa-tachometer-alt me-2"></i>
+                    Dashboard
+                </a>
+                <a href="manageaccount.html" class="list-group-item list-group-item-action bg-transparent second-text active  border-bottom">
+                        <i class="fas fa-project-diagram me-2"></i>
+                        Manage Account
+                </a>
+                <a href="manageuser.html" class="list-group-item list-group-item-action bg-transparent second-text active  border-bottom">
+                    <i class="fas fa-project-diagram me-2"></i>
+                       Manage User
+                </a>
+                    <!-- <div class="dropdown">
+                        <a class="list-group-item list-group-item-action bg-transparent second-text fw-bold dropdown-toggle" 
+                               href="manageaccount.html" data-bs-toggle="dropdown" aria-expanded="false">
+                               <i class="fas fa-project-diagram me-2"></i>
+                               <span> Manage Account</span> 
+                        </a> 
+                         <ul class="dropdown-menu ">
+                                <li><a class="dropdown-item" href="manageaccount.html">Tester</a>
+                                </li>
+                                <a class="dropdown-item" href="#">Delegator</a>
+                                </li>
+                                <li>
+                                <a class="dropdown-item" href="#">Hospital</a>
+                                </li>
+                        </ul>
+                    </div> -->
+                    <!-- <div class="dropdown">
+                        <a class="list-group-item list-group-item-action bg-transparent second-text fw-bold dropdown-toggle" 
+                               href="#" data-bs-toggle="dropdown" aria-expanded="false">
+                               <i class="fa-solid fa-users me-2"></i>Manage User</a>                        
+                        <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#"> Donate Request</a>
+                                </li>
+                                <a class="dropdown-item" href="#"> Get Request</a>
+                                </li>
+                        </ul>
+                    </div> -->
+                    <div></div>
+                    <!-- ---------------------Hospital------------------------>
+
+                    <h3 class="py-4 primary-text fs-4 fw-bold text-uppercase border-bottom"> 
+                        <i class="fa-solid fa-hospital me-2"></i> Hospital</h3>
+                        <div class="dropdown">
+                            <a class="list-group-item list-group-item-action bg-transparent second-text fw-bold dropdown-toggle" 
+                                href="#" data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="fas fa-project-diagram me-2"></i> Manage Request
+                            </a> 
+                            <ul class="dropdown-menu">
+                              <li><a class="dropdown-item" href="#">People</a>
+                                <ul class="dropdown-menu dropdown-submenu">
+                                    <li>
+                                    <a class="dropdown-item" href="#"> Donate</a>
+                                    </li>
+                                    <li>
+                                    <a class="dropdown-item" href="#"> Request</a>
+                                    </li>
+                                    <li>
+                                </ul>
+                            </li>
+                              <li><a class="dropdown-item" href="#"> hospital</a></li>
+                              <li><a class="dropdown-item" href="#"> From App</a></li>
+                            </ul>
+                          </div>
+                    
+                        <a href="bank.html" class="list-group-item list-group-item-action bg-transparent second-text fw-bold"><i
+                        class="fa-solid fa-hospital me-2"></i>Bank</a>
+
+                        <!--------------------------Tester-------------------------->
+
+                        <h3 class="py-4 primary-text fs-4 fw-bold text-uppercase border-bottom"><i class="fa-solid fa-microscope"></i>Tester</h3>
+                        <a href="#" class="list-group-item list-group-item-action bg-transparent second-text fw-bold">
+                            <a href="changestate.html" class="list-group-item list-group-item-action bg-transparent second-text fw-bold">
+                                <i class="fa-regular fa-note-sticky me-1"></i> Change State</a>
+                            <a href="request.html" class="list-group-item list-group-item-action bg-transparent second-text fw-bold">
+                                <i class="fa-solid fa-hand-holding-droplet me-2"></i>Request</a>
+                            <a href="bank.html" class="list-group-item list-group-item-action bg-transparent second-text fw-bold">
+                                <i class="fa-solid fa-building-columns me-2"></i>Bank</a> 
+
+                                <!-- ----------------------------Delegator----------------------->
+
+                            <h3 class="py-4 primary-text fs-4 fw-bold text-uppercase border-bottom"><i class="fa-solid fa-droplet"></i>Dlegator</h3>
+                             <a href="#" class="list-group-item list-group-item-action bg-transparent second-text fw-bold">
+                            <a href="#" class="list-group-item list-group-item-action bg-transparent second-text fw-bold">
+                                <i class="fa-solid fa-newspaper me-2"></i>New Order</a>
+                            <a href="#" class="list-group-item list-group-item-action bg-transparent second-text fw-bold">
+                                <i class="fa-solid fa-bullseye me-2"></i>Order State</a> 
+                            
+            </div>
+        </div>  
+        <!-- /#sidebar-wrapper -->
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+            <section style="background-color: #eee;">
+                <div class="container mt-5">
+                    <div class="row d-flex justify-content-center align-items-center">
+                    <div class="col-lg-6 col-xl-11">
+                        <div class="card text-black" style="border-radius: 25px;">
+                        <div class="card-body p-md-5">
+                            <div class="row justify-content-center">
+                            <div class="col-md-6 col-lg-6 col-xl-5 order-2 order-lg-1">
+                                <form class="row g-3 p-3 mt-5">
+                                    <!-- ---------------------Admin------------- -->
+                                    <div id="admin">
+                                        <div class="col-md-12">
+                                            <label for="inputstate" class="form-label fw-bold"> Tester :</label>
+                                            <select class="form-select" aria-label="Default select example">
+                                                <option selected>select</option>
+                                                <option value="1">1</option>
+                                                <option value="2">2</option>
+                                                <option value="2">3</option>
+                                              </select>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <label for="inputstate" class="form-label fw-bold"> Delegator :</label>
+                                            <select class="form-select" aria-label="Default select example">
+                                                <option selected>select</option>
+                                                <option value="1">1</option>
+                                                <option value="2">2</option>
+                                                <option value="2">3</option>
+                                              </select>
+                                        </div>
+                                    </div>
+                                    <!-- ---------------------Admin------------- -->
+                                    <!-- ---------------------Tester------------- -->
+                                    <div id="tester">
+                                        <div class="col-md-12">
+                                            <label for="inputstate" class="form-label fw-bold"> Type Of Blood:</label>
+                                            <select class="form-select" aria-label="Default select example">
+                                                <option selected>select</option>
+                                                <option value="1">A+</option>
+                                                <option value="2">A-</option>
+                                                <option value="3">B+</option>
+                                                <option value="4">B-</option>
+                                                <option value="5">AB+</option>
+                                                <option value="6">AB-</option>
+                                                <option value="7">O+</option>
+                                                <option value="8">O-</option>
+                                              </select>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <label for="inputID4" class="form-label fw-bold"> Amount :</label>
+                                            <input type="number" class="form-control" id="inputID4">
+                                          </div>
+                                          <div class="col-md-12">
+                                            <label for="inputstate" class="form-label fw-bold"> State :</label>
+                                            <select class="form-select" aria-label="Default select example">
+                                                <option selected>select</option>
+                                                <option value="1">Pending</option>
+                                                <option value="2">Recived</option>
+                                                <option value="3">Finished</option>
+                                              </select>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <label for="inputID4" class="form-label fw-bold"> Note :</label>
+                                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="maleGender"
+                                            value="option2" />
+                                            <label class="form-check-label" for="confirm">is OK</label>
+                                        </div>
+
+                                    </div>
+                                    <!-- ---------------------Tester------------- -->
+                                    <!-- ---------------------Delegator------------- -->
+                                    <div id="delegator">
+                                        <div class="col-md-12">
+                                            <label for="inputstate" class="form-label fw-bold"> State :</label>
+                                            <select class="form-select" aria-label="Default select example">
+                                                <option selected>select</option>
+                                                <option value="1">Pending</option>
+                                                <option value="2">Recived</option>
+                                                <option value="3">Finished</option>
+                                              </select>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <label for="inputID4" class="form-label fw-bold"> Note :</label>
+                                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                        </div>
+
+                                    </div>
+                                    <!-- ---------------------Delegator------------- -->
+                                    <!-- ---------------------Hospital------------- -->
+                                    <div id="hospital">
+                                        <div class="col-md-12">
+                                            <label for="inputstate" class="form-label fw-bold"> type :</label>
+                                            <select class="form-select" aria-label="Default select example">
+                                                <option selected>select</option>
+                                                <option value="1">A+</option>
+                                                <option value="2">A-</option>
+                                                <option value="3">B+</option>
+                                                <option value="4">B-</option>
+                                                <option value="5">AB+</option>
+                                                <option value="6">AB-</option>
+                                                <option value="7">O+</option>
+                                                <option value="8">O-</option>
+                                              </select>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <label for="inputID4" class="form-label fw-bold"> Amount :</label>
+                                            <input type="number" class="form-control" id="inputID4">
+                                          </div>
+                                          <div class="col-md-12">
+                                            <label for="inputstate" class="form-label fw-bold"> State :</label>
+                                            <select class="form-select" aria-label="Default select example">
+                                                <option selected>select</option>
+                                                <option value="1">Pending</option>
+                                                <option value="2">Recived</option>
+                                                <option value="3">Finished</option>
+                                              </select>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <label for="inputID4" class="form-label fw-bold"> Note :</label>
+                                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>                                    </div>
+                                        <div class="col-md-12">
+                                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="maleGender"
+                                            value="option2" />
+                                            <label class="form-check-label" for="confirm">is OK</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 text-center">
+                                        <button type="submit" class="btn btn-secondary"> Save </button>
+                                    </div>
+                                    <!-- ---------------------Hospital------------- -->
+
+                                </form>
+                            </div>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </section>  
+    <!-- /#page-content-wrapper -->
+        </div>
+<script src="JS/chart.js/Chart.min.js"></script>
+<script src="JS/script.js"></script>
+<script src="JS/bootstrap.bundle.min.js"></script>
+<script src="JS/all.min.js"></script>
+</body>
+</html>
